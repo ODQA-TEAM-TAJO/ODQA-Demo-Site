@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAJO Chatbot</title>
+    {% block scripts %}
+        <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        var xhr;
+
+        function sendAsk() {
+            chattext = document.getElementById("chattext").value;
+            if(chattext == "") {
+                document.getElementById("chattext").focus();
+                return false;
+            }
+
+            addtext = "<div style='font-size:xx-large;margin:60px 0;text-align:right;'><span style='padding:20px 20px;background-color:#3388cc;border-radius:10px;'>" + chattext + "</span><img src='/static/_images/MY.png' style='width:100px;height:100px;margin:-35px 10px;'/></div>";
+            document.getElementById("chatbox").innerHTML += addtext;
+
+            var objDiv = document.getElementById("chatbox");
+            objDiv.scrollTop = objDiv.scrollHeight;
+
+            var strurl = "chatanswer?questext=" + chattext;
+            //alert(strurl);
+            //return false;
+
+            xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    var data = xhr.responseText;
+
+                    var obj = JSON.parse(data);
+
+                    if(obj.flag == "0"){
+
+                        bottext = "<div style='font-size:xx-large;margin:60px 0;text-align:left;'><img src='/static/_images/TAJO.png' style='width:100px;height:100px;margin:-35px 10px;'/><span style='padding:20px 20px;background-color:#DDD;border-radius:10px;'>" + obj.anstext + "</span></div>";
+                        document.getElementById("chatbox").innerHTML += bottext;
+
+                        var objDiv = document.getElementById("chatbox");
+                        objDiv.scrollTop = objDiv.scrollHeight;
+
+                        document.getElementById("chattext").value = "";
+                        document.getElementById("chattext").focus();
+
+                    }
+                }
+            };
+            xhr.open("GET", strurl);
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            xhr.send(null);
+        }
+
+        </script>
+    {% endblock %}
+
+    {% block styles %}
+    <style>
+    .chatheader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding:10px 0;
+        background-color:#DDD;
+        color: #000;
+        text-align: center;
+        height:7%;
+    }
+    .chatfooter {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding:10px 0;
+        background-color: #FFF;
+        color: #000;
+        text-align: center;
+        height:7%;
+    }
+    </style>
+    {% endblock %}
+
+</head>
+<body style="height:100%;background-color:#BBCCDD;overflow:hidden">
+<div style="padding:0px;height:100%;background-color:#e8e8e8;">
+    <div class="chatheader" style='font-size:xx-large;padding:20px 20px;text-align:center;'>TAJO CHATBOT</div>
+    <div id="chatbox" style="position:absolute;top:9%;bottom:9.5%;left:0;right:0;hegith:100%;background-color:#BBCCDD;overflow-y:scroll;overflow-x:hidden;max-height:100vh;"></div>
+    <div class="chatfooter">
+        <table width="100%">
+            <tr>
+                <td width="1%"></td>
+                <td width="87%"><input id="chattext" style="font-size:x-large;padding:10px 0;width:100%;border:solid 0px #FFF;"></td>
+                <td width="1%"></td>
+                <td width="10%"><button style="font-size:x-large;padding:10px 0;width:100%;" onclick="sendAsk()" id="sendbtn">send</button></td>
+                <td width="1%"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+<script>
+
+var input = document.getElementById("chattext");
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    document.getElementById("sendbtn").click();
+  }
+});
+
+</script>
