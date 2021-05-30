@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>ODQA</title>
+    <title>타조 챗봇</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
@@ -11,11 +11,11 @@
   </style> 
   </head>
   <body>
-    <h1>타조 챗봇</h1>
-    <details>
-      <summary><img src="static/image/Notice.png" width="12%", height="12%">가이드 라인</summary>
-      질문은 이렇게 해주세요!
-    </details>
+    <div id="head">
+      <img src="static/image/button_top.png" height="25px" width="78px">
+      <h1>타조 챗봇</h1>
+      <img src="static/image/github-mark.png" height="32px" width="32px">
+    </div>
     <script language="javascript">
       function date() {
         var today = new Date();
@@ -24,17 +24,16 @@
       }
       document.write("<h6>"+date()+"</h6>")
     </script>
-    <div>
-      <div id="chatbox">
-        <p class="botText"><span>안녕하세요.</span></p>
-        <p class="botText"><span>타조입니다.</span></p>
-        <p class="botText"><span>무엇이든 물어보세요!</span></p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요.">
-        <input id="buttonInput" type="submit" value="">
-      </div>
-      <script src="/static/js/main.js"></script>
+    <div id="chatbox">
+      <p class="botText"><img src="static/image/tajo_guide.png" height="240px" width="350px"></p>
     </div>
+    <div id="reset">
+      <img id="resetButton" src="static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
+    </div>
+    <div id="userInput">
+      <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
+      <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">
+    </div>
+    <script src="/static/js/main.js"></script>
   </body>
 </html>
