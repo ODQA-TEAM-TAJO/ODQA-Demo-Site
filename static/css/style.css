@@ -10,6 +10,51 @@ h1 {
     font-size: 40px;
 }
 
+details {
+    color: #556677FF;
+    background-color: #FFFFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Malgun Gothic;
+    font-size: 20px;
+}
+
+summary {
+    cursor: pointer;
+    outline: none;
+}
+
+summary:before {
+}
+
+details[open] summary:before {
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+h6 {
+    color: whitesmoke;
+    background-color: #80808080;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Malgun Gothic;
+    font-size: 10px;
+}
+
 #chatbox {
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +72,7 @@ h1 {
 #textInput {
     width: 100%;
     border: none;
+    color: #556677FF;
     font-family: Malgun Gothic;
     font-size: 24px;
 }

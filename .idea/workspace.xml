@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[add files] first">
+    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[add files] ramake">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Elasticsearch Setting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/_images/MY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/_images/TAJO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chathome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +50,7 @@
       <workItem from="1621171331690" duration="33000" />
       <workItem from="1621171688411" duration="58000" />
       <workItem from="1622345954287" duration="2871000" />
-      <workItem from="1622349107967" duration="1368000" />
+      <workItem from="1622349107967" duration="9122000" />
     </task>
     <task id="LOCAL-00001" summary="[add files] first">
       <created>1621171736148</created>
@@ -76,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621171736148</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[add files] ramake">
+      <created>1622351676346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622351676346</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[add files] first" />
-    <option name="LAST_COMMIT_MESSAGE" value="[add files] first" />
+    <MESSAGE value="[add files] ramake" />
+    <option name="LAST_COMMIT_MESSAGE" value="[add files] ramake" />
   </component>
 </project>

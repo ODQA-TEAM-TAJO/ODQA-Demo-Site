@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
+    <title>ODQA</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
@@ -11,6 +12,18 @@
   </head>
   <body>
     <h1>타조 챗봇</h1>
+    <details>
+      <summary><img src="static/image/Notice.png" width="12%", height="12%">가이드 라인</summary>
+      질문은 이렇게 해주세요!
+    </details>
+    <script language="javascript">
+      function date() {
+        var today = new Date();
+        var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
+        return today.getFullYear()+"년 "+(today.getMonth()+1)+"월 "+today.getDate()+"일 "+week[today.getDay()]
+      }
+      document.write("<h6>"+date()+"</h6>")
+    </script>
     <div>
       <div id="chatbox">
         <p class="botText"><span>안녕하세요.</span></p>
