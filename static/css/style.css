@@ -13,7 +13,6 @@ h1 {
     left: 0;
     background-color: #FFFFFFFF;
     width: 100%;
-    padding-left: 1%;
 }
 
 h6 {
@@ -33,12 +32,10 @@ h6 {
 
 #chatbox {
     position: absolute;
-    top: 140px;
+    top: 95px;
     bottom: 115px;
     width: 99.5%;
     overflow: auto;
-    padding-left: 1%;
-    padding-right: 1%;
 }
 
 #reset {
