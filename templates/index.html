@@ -10,7 +10,7 @@
       }
   </style> 
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <div id="head">
       <table border="0" width="100%">
         <tr>
@@ -23,7 +23,7 @@
           </td>
           <td width="15%">
             <div id="head_2">
-              <a id="url_1" href="https://github.com/skaurl" target="_blank">Created By 김남혁</a>
+              <a id="url_1" href="https://github.com/skaurl" target="_blank">Created by 김남혁</a>
               <a id="url_2" href="https://github.com/dataminegames" target="_blank">Designed by 장보윤</a>
             </div>
           </td>
@@ -45,8 +45,16 @@
       <img id="resetButton" src="static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
     </div>
     <div id="userInput">
-      <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
-      <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">
+      <table border="0" width="100%">
+        <tr>
+          <td width="95%">
+            <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
+          </td>
+          <td width="5%">
+            <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">
+          </td>
+        </tr>
+      </table>
     </div>
     <script src="/static/js/main.js"></script>
   </body>

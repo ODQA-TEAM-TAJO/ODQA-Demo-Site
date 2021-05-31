@@ -8,7 +8,7 @@ function getBotResponse() {
     var objDiv = document.getElementById("chatbox");
     objDiv.scrollTop = objDiv.scrollHeight;
     $.get("/get", { msg: rawText }).done(function(data) {
-      var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+      var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>' + data + '</span></p>';
       $("#chatbox").append(botHtml);
       document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
       var objDiv = document.getElementById("chatbox");

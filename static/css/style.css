@@ -61,7 +61,7 @@ h6 {
 #chatbox {
     position: absolute;
     top: 95px;
-    bottom: 115px;
+    bottom: 120px;
     width: 99.5%;
     overflow: auto;
 }
@@ -70,7 +70,7 @@ h6 {
     background-color: #F9F9F9FF;
     position: absolute;
     left: 0;
-    bottom: 70px;
+    bottom: 75px;
     width: 100%;
     text-align: right;
 }
@@ -92,7 +92,7 @@ h6 {
 
 #textInput {
     height: 60px;
-    width: calc(99% - 80px);
+    width: 100%;
     color: #556677FF;
     font-family: Malgun Gothic;
     font-size: 24px;
@@ -100,6 +100,8 @@ h6 {
     outline: None;
     margin-top: 5px;
     margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 #buttonInput {
@@ -108,7 +110,8 @@ h6 {
     vertical-align: text-top;
     margin-top: 3px;
     margin-bottom: 3px;
-    margin-left: auto;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .userText {
@@ -117,6 +120,7 @@ h6 {
     font-size: 24px;
     text-align: right;
     line-height: 150%;
+    margin-right: 1%;
 }
 
 .userText span {
@@ -137,6 +141,13 @@ h6 {
     background-color: #FFFFFFFF;
     padding: 1%;
     border-radius: 5px;
+}
+
+#botImg {
+    height: 46px;
+    width: 122px;
+    position: relative;
+
 }
 
 #tidbit {
