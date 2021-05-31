@@ -2,13 +2,13 @@
 <html lang="ko">
   <head>
     <title>타조 챗봇</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="ODQA-Demo-Site/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       body {
         background-color: #9BBBD4FF;
       }
-  </style> 
+  </style>
   </head>
   <body style="overflow-x: hidden;">
     <div id="head">
@@ -17,7 +17,7 @@
           <td width="85%">
             <div id="head_1">
               <a href="https://github.com/bcaitech1/p3-mrc-tajo" target="_blank">
-                <img src="static/image/group_topleft.png" height="82px" width="170px">
+                <img src="ODQA-Demo-Site/static/image/group_topleft.png" height="82px" width="170px">
               </a>
             </div>
           </td>
@@ -39,23 +39,23 @@
       document.write("<h6>"+date()+"</h6>")
     </script>
     <div id="chatbox">
-      <p class="botText"><img src="static/image/group_profile.png" height="265px" width="397px"></p>
+      <p class="botText"><img src="ODQA-Demo-Site/static/image/group_profile.png" height="310px"></p>
     </div>
     <div id="reset">
-      <img id="resetButton" src="static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
+      <img id="resetButton" src="ODQA-Demo-Site/static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
     </div>
     <div id="userInput">
       <table border="0" width="100%">
         <tr>
           <td width="95%">
-            <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
+            <textarea id="textInput" wrap="soft" placeholder="질문을 입력해주세요." align="top"></textarea>
           </td>
           <td width="5%">
-            <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">
+            <input id="buttonInput" type="image" src="ODQA-Demo-Site/static/image/button_send.png" alt="Submit Form">
           </td>
         </tr>
       </table>
     </div>
-    <script src="/static/js/main.js"></script>
+    <script src="ODQA-Demo-Site/static/js/main.js"></script>
   </body>
 </html>
