@@ -11,8 +11,10 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 5px 15px 0 5px;
     background-color: #FFFFFFFF;
-    width: 100%;
+    width: calc(100% - 20px);
+    border-bottom: 1px solid #EDEDED;
 }
 
 #head_1 {
@@ -23,7 +25,8 @@ h1 {
 #head_2 {
     width: 100%;
     text-align: right;
-    margin-top: 30%;
+    margin-top: 60px;
+    padding: 0;
 }
 
 a:link {
@@ -60,9 +63,11 @@ h6 {
 
 #chatbox {
     position: absolute;
-    top: 95px;
+    top: 100px;
+    left: 0;
+    padding: 15px;
     bottom: 120px;
-    width: 99.5%;
+    width: calc(100% - 30px);
     overflow: auto;
 }
 
@@ -70,14 +75,15 @@ h6 {
     background-color: #F9F9F9FF;
     position: absolute;
     left: 0;
-    bottom: 75px;
+    bottom: 94px;
     width: 100%;
     text-align: right;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
 }
 
 #resetButton {
-    margin-top: 6px;
-    margin-bottom: 3px;
+    margin: 5px 2px -4px;
 }
 
 #userInput {
@@ -87,46 +93,58 @@ h6 {
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: calc(100% - 10px);
+    padding: 5px;
 }
 
 #textInput {
     height: 60px;
-    width: 100%;
+    width: calc(100% - 5px);
     color: #556677FF;
     font-family: Malgun Gothic;
-    font-size: 24px;
+    font-size: 19px;
     vertical-align: top;
     outline: None;
-    margin-top: 5px;
-    margin-bottom: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 0 5px;
+    border: 0;
 }
 
 #buttonInput {
     height: 68px;
     width: 70px;
     vertical-align: text-top;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 5px;
 }
 
 .userText {
-    color: #556677FF;
     font-family: Malgun Gothic;
-    font-size: 24px;
-    text-align: right;
-    line-height: 150%;
-    margin-right: 1%;
+    font-size: 19px;
+    line-height: 120%;
+    float: right;
+    margin-right: 10px;
+    padding-left: calc(100% - 550px);
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .userText span {
     background-color: #FEF01BFF;
-    padding: 1%;
+    padding: 12px 10px 7px 12px;
     border-radius: 5px;
+    display: block;
+    max-width: 350px;
+    word-wrap:break-word;
+    /* white-space: normal !important; */
+}
+
+.userText span:after {
+    border-top: 12px solid #FEF01BFF;
+    border-right: 12px solid transparent;
+    border-top-right-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -12px;
 }
 
 .botText {
@@ -134,7 +152,7 @@ h6 {
     font-family: Malgun Gothic;
     font-size: 24px;
     text-align: left;
-    line-height: 150%;
+    line-height: 120%;
 }
 
 .botText span {
