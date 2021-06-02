@@ -124,7 +124,6 @@ h6 {
     margin-right: 10px;
     padding-left: calc(100% - 550px);
     position: relative;
-    margin-bottom: 10px;
 }
 
 .userText span {
@@ -134,7 +133,6 @@ h6 {
     display: block;
     max-width: 350px;
     word-wrap:break-word;
-    /* white-space: normal !important; */
 }
 
 .userText span:after {
@@ -148,24 +146,41 @@ h6 {
 }
 
 .botText {
-    color: #556677FF;
-    font-family: Malgun Gothic;
-    font-size: 24px;
-    text-align: left;
-    line-height: 120%;
+  font-family: Malgun Gothic;
+  font-size: 19px;
+  line-height: 120%;
+  float: left;
+  margin-left: 70px;
+  padding-right: calc(100% - 380px);
+  position: relative;
+  top: -42px;
 }
 
 .botText span {
     background-color: #FFFFFFFF;
-    padding: 1%;
+    padding: 12px 10px 7px 12px;
     border-radius: 5px;
+    display: inline-block;
+    max-width: 350px;
+    word-wrap: break-word;
 }
 
-#botImg {
-    height: 46px;
-    width: 122px;
-    position: relative;
+.botText span:after {
+    border-top: 12px solid #FFFFFFFF;
+    border-left: 12px solid transparent;
+    border-top-left-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -12px;
+}
 
+
+#botImg {
+    width: 143px;
+    position: relative;
+    padding-right: calc(100% - 150px);
+    margin-top: 5px;
 }
 
 #tidbit {
