@@ -39,7 +39,7 @@
       document.write("<h6>"+date()+"</h6>")
     </script>
     <div id="chatbox">
-      <p class="botText"><img src="static/image/group_profile.png" height="310px"></p>
+      <p class="botText_img"><img src="static/image/group_profile.png" height="310px"></p>
     </div>
     <div id="reset">
       <img id="resetButton" src="static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
@@ -48,7 +48,7 @@
       <table border="0" width="100%">
         <tr>
           <td width="95%">
-            <textarea id="textInput" wrap="soft" placeholder="질문을 입력해주세요." align="top"></textarea>
+            <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
           </td>
           <td width="5%">
             <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">

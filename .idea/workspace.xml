@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,7 @@
       <workItem from="1622430784322" duration="11000" />
       <workItem from="1622439960056" duration="3519000" />
       <workItem from="1622505529887" duration="823000" />
+      <workItem from="1622616620223" duration="2640000" />
     </task>
     <task id="LOCAL-00001" summary="[add files] first">
       <created>1621171736148</created>

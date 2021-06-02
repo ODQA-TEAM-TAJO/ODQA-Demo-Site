@@ -66,7 +66,7 @@ h6 {
     top: 100px;
     left: 0;
     padding: 15px;
-    bottom: 120px;
+    bottom: 135px;
     width: calc(100% - 30px);
     overflow: auto;
 }
@@ -145,6 +145,12 @@ h6 {
     right: -12px;
 }
 
+.botText_img {
+    color: #556677FF;
+    text-align: left;
+    line-height: 120%;
+}
+
 .botText {
   font-family: Malgun Gothic;
   font-size: 19px;
@@ -174,7 +180,6 @@ h6 {
     top: 10px;
     left: -12px;
 }
-
 
 #botImg {
     width: 143px;
