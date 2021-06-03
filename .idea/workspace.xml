@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] update">
+    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] bot text img &amp; text input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +57,8 @@
       <workItem from="1622430784322" duration="11000" />
       <workItem from="1622439960056" duration="3519000" />
       <workItem from="1622505529887" duration="823000" />
-      <workItem from="1622616620223" duration="2640000" />
+      <workItem from="1622616620223" duration="2832000" />
+      <workItem from="1622716486171" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="[add files] first">
       <created>1621171736148</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622430673073</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[modify files] bot text img &amp; text input">
+      <created>1622619684581</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622619684581</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +152,7 @@
     <MESSAGE value="[add files] first" />
     <MESSAGE value="[add files] ramake" />
     <MESSAGE value="[modify files] update" />
-    <option name="LAST_COMMIT_MESSAGE" value="[modify files] update" />
+    <MESSAGE value="[modify files] bot text img &amp; text input" />
+    <option name="LAST_COMMIT_MESSAGE" value="[modify files] bot text img &amp; text input" />
   </component>
 </project>
