@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] bot text img &amp; text input">
+    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] Demo_Site.ipynb split &amp; update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo_Site.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Demo_Site.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Setting.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,8 @@
       <workItem from="1622505529887" duration="823000" />
       <workItem from="1622616620223" duration="2832000" />
       <workItem from="1622716486171" duration="126000" />
+      <workItem from="1623297467320" duration="92000" />
+      <workItem from="1623444265458" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="[add files] first">
       <created>1621171736148</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622619684581</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[modify files] Demo_Site.ipynb split &amp; update">
+      <created>1623297542629</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623297542629</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +163,7 @@
     <MESSAGE value="[add files] ramake" />
     <MESSAGE value="[modify files] update" />
     <MESSAGE value="[modify files] bot text img &amp; text input" />
-    <option name="LAST_COMMIT_MESSAGE" value="[modify files] bot text img &amp; text input" />
+    <MESSAGE value="[modify files] Demo_Site.ipynb split &amp; update" />
+    <option name="LAST_COMMIT_MESSAGE" value="[modify files] Demo_Site.ipynb split &amp; update" />
   </component>
 </project>
