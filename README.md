@@ -1,10 +1,12 @@
 # ODQA-Demo-Site
 
-gif to be added
+
+
+## Architecture
+
+<img src="https://user-images.githubusercontent.com/55614265/121783008-7b36b980-cbe7-11eb-8d2f-9b609e501a4f.png" height="552px" width="343px"/>
 
 ## Usage
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/skaurl/ODQA-Demo-Site/blob/main/Demo_Site.ipynb)
-: If you run all the code, you can experience the odqa demo site.
 ```
 $> tree -d
 .
@@ -13,5 +15,7 @@ $> tree -d
 │     ├── image
 │     └── js
 ├── templates
-└── Demo_Site.ipynb
+├── Demo_Site.ipynb
+├── Retrieval.ipynb
+└── Setting.ipynb
 ```
