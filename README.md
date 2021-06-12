@@ -1,6 +1,6 @@
 # ODQA-Demo-Site
 
-
+<p align="center"><img src="https://user-images.githubusercontent.com/55614265/121783568-4e37d600-cbea-11eb-8ec3-486442762e8b.gif"/></p>
 
 ## Architecture
 
