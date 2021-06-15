@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] Demo_Site.ipynb split &amp; update">
+    <list default="true" id="c8643b5d-f935-4d4b-a4f1-eaa0f323b537" name="Default Changelist" comment="[modify files] .ipynb -&gt; .py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo_Site.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Demo_Site.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Setting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo_Site.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +61,8 @@
       <workItem from="1622716486171" duration="126000" />
       <workItem from="1623297467320" duration="92000" />
       <workItem from="1623444265458" duration="146000" />
+      <workItem from="1623753102134" duration="6000" />
+      <workItem from="1623766167827" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="[add files] first">
       <created>1621171736148</created>
