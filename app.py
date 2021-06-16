@@ -13,66 +13,24 @@ es = Elasticsearch("http://localhost:9200", timeout=300, max_retries=10, retry_o
 
 # %%
 # Reader
+tag_model_path = '/content/drive/MyDrive/haystack_tutorial/Reader/tag-optimized-quantized.onnx'
+tag_tokenizer_path = '/content/drive/MyDrive/haystack_tutorial/Reader/no_compounds/bert/checkpoint-1500'
 
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, BertForTokenClassification, pipeline
-import onnxruntime as ort
-import numpy as np
-import torch
+mrc_model_path = '/content/drive/MyDrive/haystack_tutorial/Reader/reader_small-optimized-quantized.onnx'
+mrc_tokenizer_path = '/content/drive/MyDrive/haystack_tutorial/Reader/no_compounds/koelectra_small/checkpoint-2900'
 
-tokenizer = AutoTokenizer.from_pretrained("monologg/koelectra-small-v3-finetuned-korquad")
+from mrc_inference import MRC
+from tag_inference import TagInference
 
-model = ort.InferenceSession('/home/dr_lunars/electra_reader_small-optimized-quantized.onnx')
-
-
-def mrc(context, question):
-    tag = '[WHEN]'
-
-    question_input = tag + question
-    context_input = context
-
-    tokenized_examples = tokenizer(
-        question_input,
-        context_input + context_input,
-        truncation="only_second",
-        max_length=512,
-        padding="max_length",
-        stride=128,
-        return_overflowing_tokens=True
-    )
-
-    all_answer = []
-    all_score = []
-
-    for input_ids, attention_mask, token_type_ids in zip(tokenized_examples["input_ids"],
-                                                         tokenized_examples["attention_mask"],
-                                                         tokenized_examples["token_type_ids"]):
-        onnx_input = {
-            "input_ids": np.array([input_ids]),
-            "attention_mask": np.array([attention_mask]),
-            "token_type_ids": np.array([token_type_ids])
-        }
-        outputs = model.run(None, onnx_input)
-
-        answer_start_scores = torch.tensor(outputs[0])
-        answer_end_scores = torch.tensor(outputs[1])
-
-        answer_start = torch.topk(answer_start_scores, k=2)
-        answer_end = torch.topk(answer_end_scores, k=2)
-
-        for score_start, idx_start in zip(answer_start.values.tolist()[0], answer_start.indices.tolist()[0]):
-            for score_end, idx_end in zip(answer_end.values.tolist()[0], answer_end.indices.tolist()[0]):
-                if idx_start < idx_end + 1:
-                    answer = tokenizer.convert_tokens_to_string(
-                        tokenizer.convert_ids_to_tokens(input_ids[idx_start:idx_end + 1]))
-                    all_answer.append(answer)
-                    all_score.append(score_start + score_end)
-
-    if len(all_answer) != 0:
-        answer = all_answer[np.argmax(all_score)]
-    else:
-        answer = 'no answer'
-    return answer, max(all_score)
-
+tag_model = TagInference(
+    model_path=tag_model_path,
+    tokenizer_path=tag_tokenizer_path
+)
+mrc = MRC(
+    model_path=mrc_model_path,
+    tokenizer_path=mrc_tokenizer_path,
+    tag_predict_model=tag_model
+)
 # %%
 # NER
 
@@ -179,7 +137,7 @@ def get_bot_response():
         if doc != []:
             max_scr = doc[0]['_score']
             for i in range(len(doc)):
-                ans = mrc(doc[i]['_source']['text'], q)
+                ans = mrc.get_answer(doc[i]['_source']['text'], q)
                 ans_lst.append((ans[0],ans[1]*doc[i]['_score']/max_scr))
     if ans_lst != []:
         ans_lst = sorted(ans_lst, key = lambda x : x[1], reverse=True)
