@@ -4,7 +4,7 @@
 
 ## Architecture
 
-<img src="https://user-images.githubusercontent.com/55614265/121783008-7b36b980-cbe7-11eb-8d2f-9b609e501a4f.png" height="552px" width="343px"/>
+<img src="https://user-images.githubusercontent.com/55614265/122643244-b4bc7700-d149-11eb-9fe0-ef921e0e29d8.png" height="552px" width="343px"/>
 
 - Preprocess question : After the question is entered, correct the spelling.
 - Expected Q&A : If there is a highly similar expected question, output the answer to the expected question.
