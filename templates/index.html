@@ -41,6 +41,56 @@
     </script>
     <div id="chatbox">
       <p class="botText_img"><img src="static/image/group_profile.png" height="310px"></p>
+      <script language="javascript">
+        var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>타조 챗봇은 ODQA를 기반으로 하는 질의응답형 챗봇 입니다.</span></p>';
+        $("#chatbox").append(botHtml);
+        document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+
+        setTimeout(function() {
+          var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>간단한 일상 대화가 가능하기는 하지만, WIKI에서 찾을 수 있는 내용에 대해서 질문을 해주시기 바랍니다.</span></p>';
+          $("#chatbox").append(botHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 2000);
+
+        setTimeout(function() {
+          var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>그리고 질문이 구체적일수록 정확한 답변을 할 수 있습니다. 예를 들어,</span></p>';
+          $("#chatbox").append(botHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 5000);
+
+        setTimeout(function() {
+          var userHtml = '<div class="userText""><span>이순신이 누구야?</span></div>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 8000);
+
+        setTimeout(function() {
+          var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>이렇게 질문을 해주시면 명확한 정답이 없기 때문에, 답변이 어렵습니다.</span></p>';
+          $("#chatbox").append(botHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 11000);
+
+        setTimeout(function() {
+          var userHtml = '<div class="userText""><span>이순신이 전사한 전투는 어디야?</span></div>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 14000);
+
+        setTimeout(function() {
+          var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>이렇게 구체적으로 질문을 해주신다면 훨씬 더 정확한 답변을 얻으실 수 있습니다!</span></p>';
+          $("#chatbox").append(botHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 17000);
+
+        setTimeout(function() {
+          var botHtml = '<img id="botImg" src="static/image/group_tajo_1.png"><img/><p class="botText"><span>설명이 길었군요. 이제 타조 챗봇을 한번 사용해볼까요?</span></p>';
+          $("#chatbox").append(botHtml);
+          document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+          }, 20000);
+
+      </script>
     </div>
     <div id="reset">
       <img id="resetButton" src="static/image/button_refresh.png" height="32px" width="150px" onclick="window.location.reload()">
@@ -49,10 +99,22 @@
       <table border="0" width="100%">
         <tr>
           <td width="95%">
-            <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top">
+            <input id="textInput" type="text" name="msg" placeholder="질문을 입력해주세요." align="top" disabled="true">
+            <script language="javascript">
+              setTimeout(function() {
+                const target = document.getElementById('textInput');
+                target.disabled = false;
+              }, 20000);
+            </script>
           </td>
           <td width="5%">
-            <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form">
+            <input id="buttonInput" type="image" src="static/image/button_send.png" alt="Submit Form" disabled="true">
+            <script language="javascript">
+              setTimeout(function() {
+                const target = document.getElementById('buttonInput');
+                target.disabled = false;
+              }, 20000);
+            </script>
           </td>
         </tr>
       </table>

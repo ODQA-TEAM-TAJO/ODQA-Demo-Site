@@ -23,9 +23,9 @@ class MRC:
 
         tokenized_examples = self.tokenizer(
                 question_input,
-                context_input+context_input,
+                context_input,
                 truncation="only_second",
-                max_length=512,
+                max_length=256,
                 padding="max_length",
                 stride = 128,
                 return_overflowing_tokens=True
@@ -45,6 +45,7 @@ class MRC:
                 "token_type_ids": np.array([token_type_ids])
             }
             outputs = self.model.run(None, onnx_input)
+            print(outputs[0].shape)
 
             answer_start_scores = torch.tensor(outputs[0])
             answer_end_scores = torch.tensor(outputs[1])
