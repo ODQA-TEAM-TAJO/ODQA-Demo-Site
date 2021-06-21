@@ -16,48 +16,41 @@ daily_score = 0
 # %%
 # DPR
 
-# from haystack.document_store.faiss import FAISSDocumentStore
-# document_store = FAISSDocumentStore.load(faiss_file_path="my_faiss", sql_url="sqlite:///my_doc_store.db", index="document")
+from haystack.document_store.faiss import FAISSDocumentStore
+document_store = FAISSDocumentStore.load(faiss_file_path="my_faiss", sql_url="sqlite:///my_doc_store.db", index="document")
 
-# from dpr_inference import DPR
+from dpr_inference import DPR
 
-# model_path = '/home/dr_lunars/models/question_encoder-optimized-quantized.onnx'
-# tokenizer_path = "kykim/bert-kor-base"
+model_path = '/home/dr_lunars/models/question_encoder-optimized-quantized.onnx'
+tokenizer_path = "kykim/bert-kor-base"
 
-# dpr = DPR(
-#     model_path=model_path,
-#     tokenizer_path=tokenizer_path,
-#     document_store=document_store
-# )
+dpr = DPR(
+    model_path=model_path,
+    tokenizer_path=tokenizer_path,
+    document_store=document_store
+)
 
 # %%
 # Reader
 
-# tag_model_path = '/home/dr_lunars/models/tag-optimized-quantized.onnx'
-# tag_tokenizer_path = '/home/dr_lunars/models/tokenizers/tag_bert'
+tag_model_path = '/home/dr_lunars/models/tag-optimized-quantized.onnx'
+tag_tokenizer_path = '/home/dr_lunars/models/tokenizers/tag_bert'
 
-# mrc_model_path = '/home/dr_lunars/models/electra_reader_small-optimized-quantized.onnx'
-# mrc_tokenizer_path = '/home/dr_lunars/models/tokenizers/koelectra_small'
+mrc_model_path = '/home/dr_lunars/models/electra_reader_small-optimized-quantized.onnx'
+mrc_tokenizer_path = '/home/dr_lunars/models/tokenizers/koelectra_small'
 
-# from mrc_inference import MRC
-# from tag_inference import TagInference
+from mrc_inference import MRC
+from tag_inference import TagInference
 
-# tag_model = TagInference(
-#     model_path=tag_model_path,
-#     tokenizer_path=tag_tokenizer_path
-# )
-# mrc = MRC(
-#     model_path=mrc_model_path,
-#     tokenizer_path=mrc_tokenizer_path,
-#     tag_predict_model=tag_model
-# )
-
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, BertForTokenClassification, pipeline
-
-tokenizer = AutoTokenizer.from_pretrained('monologg/koelectra-small-v3-finetuned-korquad')
-model = AutoModelForQuestionAnswering.from_pretrained('monologg/koelectra-small-v3-finetuned-korquad')
-
-mrc = pipeline("question-answering", model=model, tokenizer=tokenizer)
+tag_model = TagInference(
+    model_path=tag_model_path,
+    tokenizer_path=tag_tokenizer_path
+)
+mrc = MRC(
+    model_path=mrc_model_path,
+    tokenizer_path=mrc_tokenizer_path,
+    tag_predict_model=tag_model
+)
 
 # %%
 # Rerank
@@ -262,17 +255,14 @@ def get_bot_response():
                     }
                 }
             }
-            # sparse_docs = es.search(index='document',body=query,size=10)['hits']['hits']
-            # dense_docs = dpr.get_documents(q, top_k=5)
-            # doc = rerank(sparse_docs, dense_docs)
-            doc = es.search(index='document',body=query,size=5)['hits']['hits']
+            sparse_docs = es.search(index='document',body=query,size=10)['hits']['hits']
+            dense_docs = dpr.get_documents(q, top_k=5)
+            doc = rerank(sparse_docs, dense_docs)
             if doc != []:
                 max_scr = doc[0]['_score']
                 for i in range(len(doc)):
-                    # ans = mrc.get_answer(context=doc[i]['_source']['text'], question=q)
-                    ans = mrc(question=q, context=doc[i]['_source']['text'], topk=1) # tmp
-                    # ans_lst.append((ans[0],ans[1]*doc[i]['_score']/max_scr))
-                    ans_lst.append((ans['answer'],ans['score']*doc[i]['_score']/max_scr)) # tmp
+                    ans = mrc.get_answer(context=doc[i]['_source']['text'], question=q)
+                    ans_lst.append((ans[0],ans[1]*doc[i]['_score']/max_scr))
         if ans_lst != []:
             ans_lst = sorted(ans_lst, key = lambda x : x[1], reverse=True)
             if ans_lst[0][1] >= 0.5:
